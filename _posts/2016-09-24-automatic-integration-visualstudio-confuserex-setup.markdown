@@ -2,9 +2,9 @@
 published: true
 title: Automatic Integration: VisualStudio, ConfuserEx & Setup
 layout: post
+tags: [VisualStudio, ConfuserEx, Obfuscation]
+categories: [Automatic, Integration]
 ---
-Platform: Windows 7 64
-
 In this post I'll demonstrate how to integrate VisualStudio build process with obfuscation.
 
 Recently I've been playing with [ConfuserEx](https://yck1509.github.io/ConfuserEx/). I decided to use obfuscation with ConfuserEx in my project. It's fairly easy to obfuscate a built assembly. But to integrating with VisualStudio there are some steps. Let's dive in!
@@ -22,13 +22,12 @@ After creating and configuring our ConfuserEx project we are ready to roll. Run 
     )
 
 Let's examine these commands:
-`if $(ConfigurationName) == Release` is to make sure we only obfuscate Release binaries. If you project have more than Debug/Release configuration you can specify which configuration you want to obfuscate.
+`if $(ConfigurationName) == Release` is to make sure we only obfuscate Release binaries. If your project have more than Debug/Release configuration you can specify which configuration you want to obfuscate.
 
 `E:\Tools\ConfuserEx_bin\Confuser.CLI.exe $(SolutionDir)confuser.crproj` is the path to Confuser.CLI.exe binary on your system followed by path of ConfuserEx project file.
 
-`copy /y $(TargetDir)Confused\*.* $(TargetDir)` copies confused binaries back to their original folder.
+`copy /y $(TargetDir)Confused\*.* $(TargetDir)` copies all files (confused binaries) back to their original folder.
 
 Finally, `rmdir $(TargetDir)Confused /s /q` removes Confused folder along with it's sub-folder (if any).
 
-
-By default ConfuserEx puts obfuscated assemblies in Confused folder.
+That's it, now build your project with Release configuration. If everything goes as expected your assemblies are now obfuscated. To confirm you can use any Disassemble tool.

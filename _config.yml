@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://raidensan.github.io
+title: FDeliri Blog
+tagline: Keep it simple
+description: Hello and welcome to my blog!
+paginate: 5

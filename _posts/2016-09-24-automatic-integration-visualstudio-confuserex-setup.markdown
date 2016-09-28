@@ -16,7 +16,7 @@ _Note: If you are using EntityFramework in your assembly you are going to have a
 After creating and configuring our ConfuserEx project we are ready to roll. Run VisualStudio and open your project. Go to your peoject properties and open Build Events tab. Type the following commands inside Post-build event command line:
     
     if $(ConfigurationName) == Release (
-    E:\Tools\ConfuserEx_bin\Confuser.CLI.exe $(SolutionDir)confuser.crproj
+    ...\ConfuserEx_bin\Confuser.CLI.exe $(SolutionDir)confuser.crproj
     copy /y $(TargetDir)Confused\*.* $(TargetDir)
     rmdir $(TargetDir)Confused /s /q
     )
@@ -24,7 +24,7 @@ After creating and configuring our ConfuserEx project we are ready to roll. Run 
 Let's examine these commands:
 `if $(ConfigurationName) == Release` is to make sure we only obfuscate Release binaries. If your project have more than Debug/Release configuration you can specify which configuration you want to obfuscate.
 
-`E:\Tools\ConfuserEx_bin\Confuser.CLI.exe $(SolutionDir)confuser.crproj` is the path to Confuser.CLI.exe binary on your system followed by path of ConfuserEx project file.
+`...\ConfuserEx_bin\Confuser.CLI.exe $(SolutionDir)confuser.crproj` is the path to Confuser.CLI.exe binary on your system followed by path of ConfuserEx project file. Remember to replace `...` this with actual path in your system.
 
 `copy /y $(TargetDir)Confused\*.* $(TargetDir)` copies all files (confused binaries) back to their original folder.
 

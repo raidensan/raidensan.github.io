@@ -1,6 +1,6 @@
 ---
 published: true
-title: Automatic Integration: VisualStudio & ConfuserEx
+title: Lets make a macro based Logging
 layout: post
 tags: [CPP, macro, logging]
 categories: [Automatic]

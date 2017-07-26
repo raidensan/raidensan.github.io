@@ -9,7 +9,7 @@ categories: [Automatic, Integration]
 # Lets make a macro based Logging
 
 I have been attached to a software project for an Embedded Linux system.
-Currently, our project is infested with  f**kton of logs.
+Currently, our project is infested with  a lot of logs.
 These logs are "printed" on both stdout and a log file on target system.
 Also, log outputs are being put to "output" always.
 So I tried to find a way to keep current logging functions almost intact while extending the current functionality.

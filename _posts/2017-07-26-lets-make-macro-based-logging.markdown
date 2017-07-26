@@ -2,8 +2,8 @@
 published: true
 title: Automatic Integration: VisualStudio & ConfuserEx
 layout: post
-tags: [VisualStudio, ConfuserEx, Obfuscation]
-categories: [Automatic, Integration]
+tags: [CPP, macro, logging]
+categories: [Automatic]
 ---
 
 # Lets make a macro based Logging

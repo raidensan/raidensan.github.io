@@ -6,8 +6,6 @@ tags: [CPP, macro, logging]
 categories: [Automatic]
 ---
 
-# Lets make a macro based Logging
-
 I have been attached to a software project for an Embedded Linux system.
 Currently, our project is infested with  a lot of logs.
 These logs are "printed" on both stdout and a log file on target system.
